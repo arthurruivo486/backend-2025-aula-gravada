@@ -1,0 +1,39 @@
+Table users {
+  id integer [primary key]
+  username text [not null]
+  email text [not null, unique]
+  password text [default: '123456']
+  photo text [note:'link to photo']
+  role varchar [default: 'user', note: 'admin/parcial/comum']
+  created_at timestamp [default:`CURREMENT_TIMESTAMP`]
+  updated_at timestamp
+
+
+  indexes {
+    (email, password) [name: 'login']
+    (username) [name: 'name']
+    (email) [unique,name:'unique_email']
+  }
+}
+
+Table payments {
+  id integer [primary key, increment]
+  user_id integer [not null,note: 'quem realizou o pagamento']
+  user_control integer [note: 'usuário que criou o registro']
+  value real
+  receipt text
+  obs text
+  paymentdate timestamp [not null]
+  photo text [note:'link to photo']
+  verified boolean [default: false, note:'verificado']
+  created_at timestamp [default:`CURREMENT_TIMESTAMP`]
+  updated_at timestamp
+
+  indexes {
+    (paymentdate) [name: 'all_payment_of_date']
+    (value) [name: 'range_of_value']
+    (paymentdate, value) [name: 'all_payment_between_date_and_value']
+  }
+}
+
+Ref: payments.user_id > users.id
