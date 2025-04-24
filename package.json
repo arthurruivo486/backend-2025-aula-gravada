@@ -4,8 +4,9 @@
   "description": "Backend da aula gravada",
   "main": "src/index.js",
   "type": "module",
+  
   "scripts": {
-    "dev": "node src/index.js"
+    "dev": "node --watch --experimental-sqlite --trace-warnings src/index.js"
   },
   "repository": {
     "type": "git",
