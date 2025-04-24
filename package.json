@@ -1,0 +1,24 @@
+{
+  "name": "backend-2025-aula-gravada",
+  "version": "1.0.0",
+  "description": "Backend da aula gravada",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arthuruivo486/backend-2025-aula-gravada.git"
+  },
+  "keywords": [
+    "backend",
+    "aula",
+    "gravaçao"
+  ],
+  "author": "Arthur Ruivo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
