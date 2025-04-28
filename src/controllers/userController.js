@@ -1,4 +1,4 @@
-export const geUsers = (req,res) =>{
+export const getUsers = (req,res) =>{
 
     try {
         //buscar os ususarios no banco

@@ -1,4 +1,4 @@
-export const geUsers = (req,res) =>{
+export const getPayments = (req,res) =>{
 
     try {
         //buscar os Pagamentos no banco

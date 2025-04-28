@@ -4,7 +4,7 @@ const router = express.Router();
 import userRoutes from './userRoutes.js';
 import paymentsRoutes  from './paymentsRoutes.js'
 
-routes.use('/api', userRoutes);
-routes.use('/api', paymentsRoutes)
+router.use('/api', userRoutes);
+router.use('/api', paymentsRoutes)
 
 export default router;
